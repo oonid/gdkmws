@@ -1,0 +1,12 @@
+.DS_Store
+.idea/*
+*.iml
+bin/*
+include/*
+local/*
+share/*
+lib/*
+.firebase/*
+.firebaserc
+firebase.json
+public/deliverables/private/*

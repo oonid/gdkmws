@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ulasan Minggu ke-2 Google Developer Kejar Mobile Web Specialist</title>
+</head>
+<body>
+<h1>Ulasan Minggu ke-2 Google Developer Kejar Mobile Web Specialist</h1>
+<ol>
+    <li><a href="#ulasan1">Tidak diperlukan webserver ataupun hosting untuk belajar JavaScript</a></li>
+    <li><a href="#ulasan2">Angka? Bulat atau Pecahan?</a></li>
+    <li><a href="#ulasan3">Sintaks JavaScript <strong>let</strong> baru ada di ECMA Script 2015 (ES6)</a></li>
+    <li><a href="#ulasan4">Tutorial video untuk hosting di Firebase</a></li>
+</ol>
+<p id="ulasan1">
+<h3>#1 Tidak diperlukan webserver ataupun hosting untuk belajar JavaScript</h3>
+Meskipun pada materi minggu ke-2 ini dibahas mengenai
+<a target="_blank" href="https://drive.google.com/file/d/1QVGVzR9pnDux8CioYwPuwyWefXAHk3c9/view?usp=sharing">hosting di Firebase</a>
+maupun ada contoh
+<a target="_blank" href="https://drive.google.com/file/d/1SIF9ZHXiGsecjJpHei5wcAXlICS07nJI/view?usp=sharing">eksekusi http-server</a>,<br/>
+tapi perlu diketahui bahwa belajar JavaScript tidak dibutuhkan webserver ataupun hosting.<br/><br/>
+Yang dibutuhkan terutama hanya browser, misalnya di tutorial ini digunakan Chrome Browser,<br/>
+seperti dicontohkan saat mencoba beberapa fungsi JavaScript di Chrome Dev Tools.<br/>
+Begitu juga saat mencoba add2numbers.html dan add2numbers.js, cukup langsung dibuka file add2numbers.html <br/>
+menggunakan Chrome Browser bisa langsung membuat dan menyelesaikan tugas program add2numbers.<br/>
+</p>
+<p id="ulasan2">
+<h3>#2 Angka? Bulat atau Pecahan?</h3>
+Untuk teman-teman developer, setiap kali disebutkan angka, harus dibiasakan menanyakan "Bulat atau Pecahan?".<br/>
+Seperti kata Bapak/Ibu guru matematika, angka ada bilangan bulat, di banyak bahasa pemrograman disebut <strong>integer</strong>,<br/>
+ada bilangan pecahan, di banyak bahasa pemrograman disebut <strong>float</strong>.<br/>
+Di pembahasan
+<a target="_blank" href="https://drive.google.com/file/d/1SIF9ZHXiGsecjJpHei5wcAXlICS07nJI/view?usp=sharing">add2numbers</a>,
+ada penyebutan "masukkan angka", tanpa dijelaskan ini bulat atau pecahan,<br/>
+sehingga seharusnya digunakan fungsi JavaScript parseFloat() akan bisa menangani bulat dan pecahan,<br/>
+sebaiknya tidak digunakan fungsi parseInt() yang hanya bisa menangani bilangan bulat saja.<br/>
+<br/>
+Satu hal lagi, jangan lupa lihat fungsi isNaN() di <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">MDN web docs</a>,<br/>
+karena kita perlu mengecek apakah betul pengguna memasukkan angka (numeric), NaN atau (Not a Number) akan mengecek,<br/>
+sehingga isNaN() akan mengembalikan true jika memang pengguna memasukkan angka (baik bulat maupun pecahan).<br/>
+</p>
+<p id="ulasan3">
+<h3>#3 Sintaks JavaScript <strong>let</strong> baru ada di ECMA Script 2015 (ES6)</h3>
+Untuk yang tertarik tau lebih dalam, pada pembahasan
+<a target="_blank" href="https://drive.google.com/file/d/1SIF9ZHXiGsecjJpHei5wcAXlICS07nJI/view?usp=sharing">Google Chrome DevTools</a>,<br/>
+ada pembahasan tentang sintaks <strong>let</strong>, dibandingkan dengan sintaks <strong>var</strong>, sintaks let ini
+cenderung masih baru.<br/>
+Mengacu ke <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">MDN web docs</a>,
+bisa dipelajari lebih lanjut tentang sintaks let, dan ada juga acuannya di situ<br/>
+bahwa sintaks var itu sudah ada sejak JavaScript versi 1.0 (ES1), rilis sejak sekitar tahun 1997, iya sudah tua XD.<br/>
+</p>
+<p id="ulasan4">
+<h3>#4 Tutorial video untuk hosting di Firebase</h3>
+Sebagai gambaran dari penggunaan beberapa perintah yang dijelaskan di tutorial
+<a target="_blank" href="https://drive.google.com/file/d/1QVGVzR9pnDux8CioYwPuwyWefXAHk3c9/view?usp=sharing">hosting di Firebase</a>,<br/>
+Berikut ada video berdurasi 3 menit yang menjelaskan membuat akun Firebase.<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k1D0_wFlXgo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br/>
+<br/>
+Berikut ada video berdurasi 7 menit yang menjelaskan hosting web ke firebase (lebih detil).<br/>
+Dilengkapi dengan langkah-langkah di video, sehingga memudahkan untuk dicoba-coba.<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/meofoNuK3vo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br/>
+(semua video tersebut resmi dari tim <a target="_blank" href="https://www.youtube.com/channel/UCP4bf6IHJJQehibu6ai__cg">Firebase di youtube</a>)
+</p>
+<p>&nbsp;</p>
+<p>&copy;2018 oon arfiandwi, peserta Google Developer Kejar, Mobile Web Specialist, Kota Makassar, batch #1<br/>
+    <a target="_blank" href="#">kode sumber dari halaman web ini</a></p>
+</body>
+</html>
