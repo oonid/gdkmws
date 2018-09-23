@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>
+<h1>Ulasan Minggu ke-3 Google Developer Kejar Mobile Web Specialist</h1>
+<ol>
+    <li><a href="#ulasan1">Ada kesalahan penulisan di materi CSS Grid</a></li>
+    <li><a href="#ulasan2">Menggunakan sintaks CSS height: fit-content;</a></li>
+    <li><a href="#ulasan3">Quiz MWS 2</a></li>
+    <li><a href="#ulasan4">Web Server sederhana untuk Udacity Auto Grader (Udacity Feedback Chrome Extension)</a></li>
+    <li><a href="#ulasan5">Menggunakan JavaScript untuk include HTML sebagai footer</a></li>
+</ol>
+<p id="ulasan1">
+    <h3>#1 Perhatikan sintaks dengan teliti, ada kesalahan penulisan di materi CSS Grid</h3>
+Pada materi <a target="_blank" href="https://drive.google.com/file/d/1MebavYwJufmFBwiSg0XpRwcD9AaiWJpw/view?usp=sharing">pengenalan CSS Grid</a>
+yang disampaikan di minggu ke-3, dikenalkan sejumlah sintaks terkait grid, antara lain:<br/>
+<ul>
+    <li>grid-column</li>
+    <li>grid-column-start</li>
+    <li>grid-column-end</li>
+</ul>
+grid-column dapat digunakan untuk mempersingkat penggunaan grid-column-start dan grid-column-end menjadi satu baris saja,<br/>
+sayangnya pada materi tersebut terjadi kesalahan penulisan grid-column-end yang dituliskan "grid-column-end: 1/2;",<br/>
+sedangkan seharusnya sintaks dengan X/Y itu adalah sintaks dari grid-column.
+</p>
+<p id="ulasan2">
+<h3>#2 Agar situs responsif dengan tinggi CSS Grid menyesuaikan konten, gunakan height: fit-content;</h3>
+Pada materi <a target="_blank" href="https://drive.google.com/file/d/1MebavYwJufmFBwiSg0XpRwcD9AaiWJpw/view?usp=sharing">pengenalan CSS Grid</a>
+yang disampaikan di minggu ke-3, pembahasan tentang tinggi baris masih dituliskan fix sejumlah px.<br/>
+hal ini menyebabkan masalah ketika konten yang dituliskan panjang, jadi melebihi tinggi baris yang disetting fix tersebut.<br/>
+Akan sangat merepotkan jika harus setting tinggi baris per masing-masing konten, termasuk jika dibuka di perangkat yang lain.<br/>
+Untuk itu bisa digunakan sintaks CSS height: fit-content; sehingga masing-masing row akan berbeda-beda tinggi menyesuaikan<br/>
+dengan kontennya, termasuk juga untuk responsive jika dilihat pada perangkat ponsel atau tablet.<br/>
+berikut contoh dari salah satu yang saya gunakan:<br/>
+<pre><code>
+    .content {
+        background: #eceff1;
+        grid-column: 2/7;
+        height: fit-content;
+    }
+</code></pre>
+</p>
+<p id="ulasan3">
+<h3>#3 Quiz MWS 2</h3>
+Quiz ke-2 ini, waktu pelaksanaannya lebih masuk akal, 10 soal dengan total waktu 40 menit.<br/>
+Jadi proses mencoba, mengecek referensi kursus, atau mengingat materi dari kursus masih cukup waktu.<br/>
+(terima kasih panitia!)<br/>
+Secara umum pertanyaannya dari Quiz di kursus Udacity Responsive Images.<br/>
+Tapi, ada juga pertanyaan quiz dari materi minggu sebelumnya, tentang Responsive Web Design Fundamental.<br/>
+Perhatikan baik-baik pertanyaannya, karena sejumlah pertanyaan disisipkan kata "<b>kecuali</b>", jadi jangan disamakan.<br/>
+Opini saya, pertanyaannya kadang menyulitkan, harus membuka Youtube dahulu, kemudian membuka Udacity, lalu baru membaca<br/>
+pertanyaan dari Quiz, jadi harus tetap fokus meloncat-loncat window browser.<br/>
+Kemudian ada juga pilihan jawaban yang "dibuat salah dengan kurang sesuai konteks", sehingga dengan mudah pilihannya dihindari.<br/>
+</p>
+<p id="ulasan4">
+    <h3>#4 Web Server Sederhana untuk Kebutuhan Udacity Auto Grader (Udacity Feedback Chrome Extension)</h3>
+Karena berada di komputer dengan sistem operasi Linux dan Mac, yang sudah ada instalasi Python, saya memilih untuk<br/>
+menggunakan web server sederhana dengan Python.<br/>
+<pre><code>
+    python -m SimpleHTTPServer 8000
+</code></pre>
+<br/>
+Tentu saja bisa juga dengan Web Server sekelas Nginx, Apache HTTPd, IIS, tapi tentunya overkill (buang-buang resource).<br/>
+Atau karena sekaligus instalasi npm saat kursus menggunakan grunt untuk mengubah ukuran gambar secara otomatis,<br/>
+web server sederhana juga bisa paket npm bernama http-server.
+<pre><code>
+    npm install http-server -g
+    http-server -p 8000
+</code></pre>
+</p>
+<p id="ulasan5">
+<h3>#5 Menggunakan JavaScript untuk menyertakan HTML file lain sebagai footer</h3>
+Dibandingkan menuliskan HTML (ataupun kode) yang sama terus-menerus berulang-ulang, saya membuat sebuah file HTML sebagai <br/>
+footer untuk mengurangi duplikasi penulisan HTML footer, contohnya seperti di bawah halaman ini.<br/>
+Karena dalam kelompok belajar ini hanya diperbolehkan menggunakan JavaScript dan CSS tanpa framework dan library,<br/>
+artinya saya harus mencari cara untuk bisa menyertakan (<i>include</i>) HTML file lain.<br/>
+akhirnya pilihan jatuh pada HTML yang dihasilkan dengan JavaScript, seperti kode berikut ini.<br/>
+<pre><code>
+    document.write('\
+\
+&lt;p&gt;&nbsp;&lt;/p&gt;\
+&lt;p&gt;&larr;&lt;a href="//gdkmws.firebaseapp.com"&gt;Kembali ke halaman utama&lt;/a&gt;&nbsp;&lt;/p&gt;\
+&lt;p&gt;&copy;2018 oon arfiandwi, peserta Google Developer Kejar, Mobile Web Specialist, Kota Makassar, batch #1&lt;br/&gt;\
+&lt;a target="_blank" href="https://github.com/oonid/gdkmws"&gt;kode sumber dari halaman web ini&lt;/a&gt;&lt;/p&gt;\
+\
+    ');
+</code></pre>
+</p>
+
+<script src="footer-html.js"></script>
+</body>
+</html>

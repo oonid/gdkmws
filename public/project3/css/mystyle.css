@@ -1,0 +1,32 @@
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: grid;
+    height: 100%;
+    grid-gap: 4px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 60% 40%;
+}
+.map {
+    grid-column: 1/-1;
+}
+.photo {
+    background: lightskyblue;
+    grid-column: 1/6;
+}
+.photo > img {
+    width: 100%;
+}
+.review {
+    background: lightsteelblue;
+    grid-column: 6/-1;
+}
+.footer {
+    grid-column: 1/-1;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Lokasi Taman untuk Olah Raga Lari</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
+</head>
+<body>
+    <div class="container">
+        <div class='map' id='mapid'> </div>
+        <div class='photo' id='photoid'>Foto dari area lokasi akan ditampilkan di sini</div>
+        <div class='review' id="reviewid">Review dari area lokasi akan ditampilkan di sini</div>
+    </div>
+
+    <script>
+        var makassarmap = L.map('mapid').setView([-5.146812, 119.407938], 15);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 20,
+            id: 'mapbox.streets',
+            accessToken: ''
+        }).addTo(makassarmap);
+
+        var pantailosari = L.marker([-5.145688, 119.408188]).addTo(makassarmap);
+        pantailosari.bindPopup("Anjungan Pantai<br><b>Losari</b>").openPopup();
+        pantailosari.on('click', function (e) {
+            console.log('someone click pantai losari '+e.latlng);
+            document.getElementById('photoid').innerHTML =
+                '<img src="http://www.nusakini.com/upload/image/media/AULrcq0lk1_1461475908.jpg">';
+            document.getElementById('reviewid').innerHTML = '<div><h3>Review Pantai Losari</h3>Pantai ini..</div>';
+        });
+
+        var karebosipark = L.circle([-5.134562, 119.412313], {
+            color: 'red',
+            fillColor: '#03f',
+            fillOpacity: 0.5,
+            radius: 200
+        }).addTo(makassarmap);
+        karebosipark.bindPopup("Lapangan <b>Karebosi</b>").openPopup();
+        karebosipark.on('click', function (e) {
+            document.getElementById('photoid').innerHTML =
+                '<img src="http://cdn2.tstatic.net/makassar/foto/bank/images/peserta-jago_20161030_091447.jpg">';
+            document.getElementById('reviewid').innerHTML = '<div><h3>Review Lapangan Karebosi</h3>Lapangan ini..</div>';
+        });
+
+        // var popup = L.popup().setLatLng([-5.134562, 119.412313]).setContent("Lapangan <b>Karebosi</b>").openOn(makassarmap);
+
+        var pakuipark = L.polygon([
+            [-5.150955, 119.436574],
+            [-5.151008, 119.437347],
+            [-5.152835, 119.437036]
+        ],{
+            color: 'blue',
+            fillColor: '#0f3',
+            fillOpacity: 0.5,
+        }).addTo(makassarmap);
+        pakuipark.bindPopup("<b>Taman Pakui Sayang</b>").openPopup();
+        pakuipark.on('click', function (e) {
+            document.getElementById('photoid').innerHTML =
+                '<img src="http://beritakotamakassar.fajar.co.id/wp-content/uploads/2017/02/Chairil-Taman-Pakui-Sayang-Pettarani-4.jpg">';
+            document.getElementById('reviewid').innerHTML = '<div><h3>Review Taman Pakui Sayang</h3>Taman ini..</div>';
+        });
+
+        // var arr_marker= [
+        //     [-8.701660,115.169856],
+        //     [-8.701660,115.169856],
+        //     [-8.701660,115.169856],
+        //     [-8.701660,115.169856],
+        //     [-8.701660,115.169856]
+        // ];
+        // arr_marker.forEach(function (m) {
+        //     L.marker(m).addTo(makassarmap);
+        // });
+
+        var tamanhasanuddin = L.marker([-5.142479, 119.411202]).addTo(makassarmap);
+        tamanhasanuddin.bindPopup("Taman Hasanuddin").openPopup();
+        tamanhasanuddin.on('click', function (e) {
+            console.log('someone click taman hasanuddin '+e.latlng);
+            document.getElementById('photoid').innerHTML =
+                '<img src="http://3.bp.blogspot.com/-XrFuz4amftU/VQAHF0R-13I/AAAAAAAAB-o/Blx4vtGiaj0/s1600/IMG_1447.JPG"' +
+                ' alt="gambar taman hasanuddin">';
+            document.getElementById('reviewid').innerHTML = '<div><h3>Review Taman Hassanuddin</h3>Taman ini..</div>';
+        });
+
+
+    </script>
+
+    <script src="../footer-html.js"></script>
+</body>
+</html>
