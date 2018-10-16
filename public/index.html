@@ -3,48 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Google Developer Kejar Mobile Web Specialist</title>
-<style>
-    .container {
-        display: grid;
-        width: 100%;
-        max-width: 1024px;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: auto;
-        grid-gap: 2px;
-    }
-    .menu {
-        background: #0086c3;
-        grid-column: 1/7;
-        color: white;
-        height: fit-content;
-    }
-    .sidebar {
-        background: #29b6f6;
-        grid-column: 1/2;
-        grid-row: 2/8;
-        padding: 8px;
-    }
-    .content-deliverables {
-        background: #eeffff;
-        grid-column: 2/7;
-        height: fit-content;
-    }
-    .content {
-        background: #eceff1;
-        grid-column: 2/7;
-        height: fit-content;
-    }
-    .footer {
-        background: #eceff1;
-        grid-column: 1/7;
-        grid-row: 8/9;
-        height: fit-content;
-    }
-    .fa {
-        padding: 8px;
-    }
-</style>
+    <link rel="stylesheet" href="gdkmws.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -64,6 +37,31 @@
         <span><i class="far fa-check-circle" aria-hidden="true"></i>&nbsp;Kiriman tugas "<a target="_blank" href="project3/index.html">lokasi istimewa ditampilkan dengan CSS Grid</a>"</span>
     </div>
     <div class="content">
+        <h2>Minggu Ke-7, Ke-8</h2>
+        <h3>Agenda peserta Mobile Web Specialist minggu ke-7, ke-8 (opsional)</h3>
+        <ul>
+            <li>Kursus <i>Client Server Communication</i> (gratis di <a target="_blank" href="https://www.udacity.com/course/client-server-communication--ud897">Udacity ud897</a>)</li>
+            <li>Kursus <i>Browser Rendering Optimization</i> (gratis di <a target="_blank" href="https://www.udacity.com/course/browser-rendering-optimization--ud860">Udacity ud860</a>)</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Minggu Ke-4, Ke-5, Ke-6</h2>
+        <h3>Agenda peserta Mobile Web Specialist minggu ke-4, ke-5, ke-6</h3>
+        <ul>
+            <li>Kursus <i>Asynchronous JavaScript Requests</i> (gratis di <a target="_blank" href="https://www.udacity.com/course/asynchronous-javascript-requests--ud109">Udacity ud109</a>)</li>
+            <li>Kursus <i>JavaScript ES6</i> (gratis di <a target="_blank" href="https://www.udacity.com/course/es6-javascript-improved--ud356">Udacity ud356</a>)</li>
+            <li>Kursus <i>Offline Web Applications</i> (gratis di <a target="_blank" href="https://www.udacity.com/course/offline-web-applications--ud899">Udacity ud899</a>)</li>
+            <li>Kursus <i>Web Tooling and Automation</i> (gratis di <a target="_blank" href="https://www.udacity.com/course/web-tooling-automation--ud892">Udacity ud892</a>)</li>
+            <li>Materi MWS minggu ke-4, ke-5, ke-6 (di <a target="_blank" href="https://drive.google.com/drive/folders/1S24BuaCI7KV0f0LRuhGsP_5SHDF2wtmt?usp=sharing">Google Drive</a>)</li>
+        </ul>
+        <h3>Kiriman Tugas <i>(deliverables)</i></h3>
+        <ul>
+            <li>add2numbers offline web (28 Oktober 2018)</li>
+            <li>CSS Grid offline web (28 Oktober 2018)</li>
+            <li>Leaflet dengan Mapbox dan CSS Grid offline web (28 Oktober 2018)</li>
+        </ul>
+    </div>
+    <div class="content">
         <h2>Minggu Ke-3</h2>
         <h3>Agenda peserta Mobile Web Specialist minggu ke-3</h3>
         <ul>
@@ -73,8 +71,8 @@
         </ul>
         <h3>Kiriman Tugas <i>(deliverables)</i></h3>
         <ul>
-            <li>CSS Grid (halaman ini sudah menggunakan CSS Grid, batas akhir 22 September 2019)</li>
-            <li>Leaflet2 (<a href="project3/index.html">kiriman saya</a>, batas akhir ?? September 2019)</li>
+            <li>CSS Grid (halaman ini sudah menggunakan CSS Grid, batas akhir 22 September 2018)</li>
+            <li>Leaflet2 (<a href="project3/index.html">kiriman saya</a>, batas akhir ?? September 2018)</li>
         </ul>
         <h3>Ulasan dan masukan mengenai materi di <a href="ulasan-minggu-3.html">minggu ke-3</a></h3>
     </div>
@@ -90,9 +88,9 @@
         </ul>
         <h3>Kiriman Tugas <i>(deliverables)</i></h3>
         <ul>
-            <li>Akun web Firebase (<a target="_blank" href="https://gdkmws.firebaseapp.com">kiriman saya</a>, batas akhir 13 September 2019)</li>
-            <li>add2numbers (<a target="_blank" href="https://gdkmws.firebaseapp.com/project1/index.html">kiriman saya</a>, batas akhir 13 September 2019)</li>
-            <li>Quiz MWS 1 (<a target="_blank" href="http://inixindo.co.id/learning/mod/quiz/view.php?id=4">hasil hanya bisa oleh panitia, diperlukan akses</a>), batas akhir 16 September 2019</li>
+            <li>Akun web Firebase (<a target="_blank" href="https://gdkmws.firebaseapp.com">kiriman saya</a>, batas akhir 13 September 2018)</li>
+            <li>add2numbers (<a target="_blank" href="https://gdkmws.firebaseapp.com/project1/index.html">kiriman saya</a>, batas akhir 13 September 2018)</li>
+            <li>Quiz MWS 1 (<a target="_blank" href="http://inixindo.co.id/learning/mod/quiz/view.php?id=4">hasil hanya bisa oleh panitia, diperlukan akses</a>), batas akhir 16 September 2018</li>
         </ul>
         <h3>Ulasan dan masukan mengenai materi di <a href="ulasan-minggu-2.html">minggu ke-2</a></h3>
     </div>
