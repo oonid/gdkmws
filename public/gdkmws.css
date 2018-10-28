@@ -7,7 +7,7 @@
     grid-gap: 2px;
 }
 .menu {
-    background: #0086c3;
+    background: #005577;
     grid-column: 1/7;
     color: white;
     height: fit-content;
@@ -17,6 +17,10 @@
     grid-column: 1/2;
     grid-row: 2/10;
     padding: 8px;
+}
+.sidebar img {
+    display: block;
+    margin: auto;
 }
 .content-deliverables {
     background: #eeffff;

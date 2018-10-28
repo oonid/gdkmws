@@ -4,10 +4,22 @@ const urlsToCache = [
     '/index.html',
     '/gdkmws.css',
     '/footer-html.js',
-    '/ulasan-minggu-3.html',
+    '/project3/index.html',
+    '/project3/js/map.js',
+    '/project3/data/map.json',
+    '/project3/css/mystyle.css',
     'https://use.fontawesome.com/releases/v5.3.1/css/all.css',
-    'https://use.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.woff2',
     'https://use.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.woff2',
+    'https://unpkg.com/leaflet@1.3.4/dist/leaflet.css',
+    'https://unpkg.com/leaflet@1.3.4/dist/leaflet.js',
+];
+const domainsToCache = [  /** cache less to avoid Uncaught (in promise) DOMException: Quota exceeded **/
+    '127.0.0.1',
+    'localhost',
+    'gdkmws.firebaseapp.com',
+    'use.fontawesome.com',
+    'unpkg.com',
+    'api.tiles.mapbox.com'
 ];
 
 self.addEventListener('install', function(event) {
@@ -34,12 +46,17 @@ self.addEventListener('fetch', function(event) {
                 console.log('respond '+event.request.url+' from network');
                 return fetch(event.request)
                     .then(function (response) {
-                        return caches.open(CACHE_NAME)
-                            .then(function (cache) {
-                                console.log('save response '+event.request.url+' to cache');
-                                cache.put(event.request, response.clone());
-                                return response;
-                        })
+                        // filter to cache on specific domains
+                        const domain = event.request.url.split('/')[2];
+                        if(domainsToCache.indexOf(domain) > -1) {  // domain found on list, save to cache
+                            return caches.open(CACHE_NAME)
+                                .then(function (cache) {
+                                    console.log('save response '+event.request.url+' to cache');
+                                    cache.put(event.request, response.clone());
+                                    return response;
+                                })
+                        }
+                        return response;  // default (not caching)
                 });
         })
     );

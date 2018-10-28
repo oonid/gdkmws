@@ -37,6 +37,8 @@ function selectLocation(e) {
     if(p) {
         photo.innerText = '';  // reset text to empty, change with background image
         photo.style.backgroundImage = "url("+p.image+")";
+        photo.style.backgroundSize = "100%";  // overwrite CSS
+        photo.style.backgroundRepeat = "no-repeat";  // overwrite CSS
         review.innerHTML = p.review;
     }
 }

@@ -1,0 +1,16 @@
+{
+  "short_name": "GDKMWS",
+  "name": "Google Developer Kejar Mobile Web Specialist",
+  "icons": [
+    {
+      "src": "/images/mushroom8bit.png",
+      "type": "image/png",
+      "sizes": "900x900"
+    }
+  ],
+  "start_url": "/?source=a2hs",
+  "background_color": "#eceff1",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#29b6f6"
+}

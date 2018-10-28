@@ -21,7 +21,8 @@ body {
     grid-column: 1/6;
 }
 .photo > img {
-    width: 100%;
+    background-size: 100%;
+    background: no-repeat center center;
 }
 .review {
     background: lightsteelblue;
