@@ -1,0 +1,28 @@
+{
+  "places": [
+    {
+      "location": [-5.145688, 119.408188],
+      "caption": "Anjungan Pantai<br><b>Losari</b>",
+      "image": "imgs/AULrcq0lk1_1461475908.jpg",
+      "review": "<h3>Review Pantai Losari</h3>Pantai ini..<br><br>(image courtesy of <a href='http://www.nusakini.com/upload/image/media/AULrcq0lk1_1461475908.jpg'>nusakini</a>)"
+    },
+    {
+      "location": [-5.134562, 119.412313],
+      "caption": "Lapangan <b>Karebosi</b>",
+      "image": "imgs/peserta-jago_20161030_091447.jpg",
+      "review": "<h3>Review Lapangan Karebosi</h3>Lapangan ini..<br><br>(image courtesy of <a href='http://cdn2.tstatic.net/makassar/foto/bank/images/peserta-jago_20161030_091447.jpg'>tribunnews</a>)"
+    },
+    {
+      "location": [-5.151008, 119.437347],
+      "caption": "<b>Taman Pakui Sayang</b>",
+      "image": "imgs/Chairil-Taman-Pakui-Sayang-Pettarani-4.jpg",
+      "review": "<h3>Review Taman Pakui Sayang</h3>Taman ini..<br><br>(image courtesy of <a href='http://beritakotamakassar.fajar.co.id/wp-content/uploads/2017/02/Chairil-Taman-Pakui-Sayang-Pettarani-4.jpg'>fajar</a>)"
+    },
+    {
+      "location": [-5.142479, 119.411202],
+      "caption": "<b>Taman Hasanuddin</b>",
+      "image": "imgs/IMG_1447.JPG",
+      "review": "<h3>Review Taman Hassanuddin</h3>Taman ini..<br><br>(image courtesy of <a href='http://3.bp.blogspot.com/-XrFuz4amftU/VQAHF0R-13I/AAAAAAAAB-o/Blx4vtGiaj0/s1600/IMG_1447.JPG'>fotosulawesi</a>)"
+    }
+  ]
+}
