@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#29b6f6"/>
+    <meta name="Description" content="Tugas GDK MWS menampilkan peta untuk lokasi istimewa, ditulis oleh oon arfiandwi">
     <title>Lokasi Taman untuk Olah Raga Lari</title>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-            crossorigin=""></script>
 </head>
 <body>
     <div class="container">
@@ -21,6 +19,10 @@
         <div class='review' id="reviewid">Review dari area lokasi akan ditampilkan di sini</div>
     </div>
 
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
     <script>
         var makassarmap = L.map('mapid').setView([-5.146812, 119.407938], 15);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
