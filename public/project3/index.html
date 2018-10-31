@@ -6,11 +6,21 @@
     <meta name="theme-color" content="#29b6f6"/>
     <meta name="Description" content="Tugas GDK MWS menampilkan peta untuk lokasi istimewa, ditulis oleh oon arfiandwi">
     <title>Lokasi Taman untuk Olah Raga Lari</title>
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-          crossorigin=""/>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -20,6 +30,17 @@
     </div>
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script>
+        // deferred loading leaflet css
+        (function() {
+            var css = document.createElement('link');
+            css.href = '//unpkg.com/leaflet@1.3.4/dist/leaflet.css';
+            css.rel = 'stylesheet';
+            css.property = 'stylesheet';
+            css.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(css);
+        })();
+    </script>
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
             integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
             crossorigin=""></script>
